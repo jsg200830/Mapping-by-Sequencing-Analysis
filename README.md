@@ -20,5 +20,12 @@ MSA displays the linkage peaks, which indicate linkage disequilibrium and causat
 # Running examples
 1.	“perl MSA_v0.pl --w_fqp=wt_1.fastq wt_2.fastq --m_fqp=mu_1.fastq mu_2.fastq --reference2=reference.bw2 --threads=20 --output=test”
 2.	“perl MSA_v0.pl --m_bam=mutant.PE0.sorted.bam --w_bam=wild.PE0.sorted.bam --reference2=reference.bw2 --threads=20 --output=test”
-3.	“perl MSA_v0.pl --mw_cns=mutant_wild.snps --threads=20 --output=test”
+3.	“perl MSA_v0.pl --mw_cns=mutant_wild.mileup.cns.fil --threads=20 --output=test”
 
+Details for files in example folder:
+Fastq files: Wild type, wt_1.fastq and wt_2.fastq; Mutant type, mu_1.fastq and mu_2.fastq.
+Bam files: wild.PE0.sorted.bam and mutant.PE0.sorted.bam
+SNP file: mutant_wild.mileup.cns.fil
+Reference: reference.fa and bowtie2 index files: reference.bw2.*. 
+
+Result files: mu_wt.posall.ggbio.pdf (linkage peak plot), mu_wt.pos (postive SNPs/indels), mu_wt.posall (positve SNP number in a window of 100kb and a step of 100kb)
