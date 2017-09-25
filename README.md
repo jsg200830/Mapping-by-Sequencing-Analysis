@@ -81,6 +81,7 @@ Runnig steps:
 8. perl comparing_depth_maize.pl wild.PE0.sorted.bam.depth mutant.PE0.sorted.bam.depth
 
 The output file, wild.PE0.sorted.bam.depth.exondepth_mutant.PE0.sorted.bam.depth.exondepth_exondepth.txt, is with read depth for each exon with wild type vs mutant type as followed.
+
 ExonID  Chromosome# Start End Length  Depth_wildtype  Normalizeddepth_wildtype  ExonID  Chromosome# Start End Length  Depth_mutanttype  Normalizeddepth_mutanttype  annotation
 
 The gene annotation is from the file "biomart_maize_genefeature.txt". 
