@@ -82,7 +82,7 @@ Runnig steps:
 
 The output file, wild.PE0.sorted.bam.depth.exondepth_mutant.PE0.sorted.bam.depth.exondepth_exondepth.txt, is with read depth for each exon with wild type vs mutant type as followed.
 
-ExonID  Chromosome# Start End Length  Depth_wildtype  Normalizeddepth_wildtype  ExonID  Chromosome# Start End Length  Depth_mutanttype  Normalizeddepth_mutanttype  annotation
+ExonID\tChromosome#\tStart\tEnd\tLength\tDepth_wildtype\tNormalizeddepth_wildtype\tExonID\tChromosome#\tStart\tEnd\tLength\tDepth_mutanttype\tNormalizeddepth_mutanttype\tannotation
 
 The gene annotation is from the file "biomart_maize_genefeature.txt". 
 
