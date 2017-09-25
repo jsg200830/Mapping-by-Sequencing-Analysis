@@ -38,12 +38,18 @@ MSA displays the linkage peaks, which indicate linkage disequilibrium and causat
 The example output files are listed as followed:
 
 mu_wt.pos: all SNPs/indels produce by Varscan.
+
 mu_wt.posall: all postive SNPs/indels which are homozygous in the mutant pool and heterzygous in the wild type pool, in a window of 100kb.
+
 mu_wt.posall.ggbio.pdf: linkage peaks plotted by R. 
 
 Summary for all files in example folder:
 Fastq files: Wild type, wt_1.fastq and wt_2.fastq; Mutant type, mu_1.fastq and mu_2.fastq.
+
 Bam files: wild.PE0.sorted.bam and mutant.PE0.sorted.bam.
+
 SNP file: mutant_wild.mileup.cns.fil.
+
 Reference: reference.fa and bowtie2 index files: reference.bw2.*. 
+
 Result files: mu_wt.posall.ggbio.pdf (linkage peak plot), mu_wt.pos (postive SNPs/indels), mu_wt.posall (positve SNP number in a window of 100kb)
