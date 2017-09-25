@@ -16,15 +16,20 @@ The data necessary to run MSA consists of the reference genome and three types o
 
 The example input files are listed as followed:
 
-Fastq paired input files (recommended, MSA will run bowtie2 alignment firstly, and produce final output).
+Fastq paired input files (recommended, MSA will run bowtie2 alignment firstly, and produce final output):
+
 mu_1.fastq & mu_2.fastq: pair end fastq files for mutant pool.
+
 wt_1.fastq & wt_2.fastq: pair end fastq files for wild type pool.
 
-Bam paired input files (recommended, MSA will not run alignment step but go directly into SNP/indel refining for postive ones, and produce final output).
+Bam paired input files (recommended, MSA will not run alignment step but go directly into SNP/indel refining for postive ones, and produce final output):
+
 mutant.PE0.sorted.bam: aligment file for mutant pool by bowtie2.
+
 wild.PE0.sorted.bam: aligment file for wild type pool by bowtie2.
 
-Variant input file (time effective and only for linkage peak plotting, but need to organize SNP/indel file).
+Variant input file (time effective and only for linkage peak plotting, but need to organize SNP/indel file):
+
 mutant_wild.mileup.cns.fil: SNP/indel file with a format of chromosome#, position, reference nucleotide, alternative nucleotide, reference read number, alternative site' read number. It is retrieved from the SNP/indels file by Varscan, and the user can make it by themselves by using any available software. 
 
 # Running examples
