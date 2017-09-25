@@ -36,13 +36,14 @@ mutant_wild.mileup.cns.fil: SNP/indel file with a format of chromosome#, positio
 MSA displays the linkage peaks, which indicate linkage disequilibrium and causative mutations responsible for the phenotype of interest. Results consist of SNPs/indels, positive SNPs/indels, and linkage peak figures. It allows simultaneous analysis of multiple mutants, multiple wild type pools, and does the comparison between them, by searching for the identical regions in the mutants against wild type. For example, in F2s from B73 mutant x Mo17 maize mapping populations, the mutants would be screened for the B73 SNPs/indels, which are considered as positive SNPs. The Mo17 SNPs/indels in the mutant are discarded, which reduces the noise in the whole genome. To extend the search based on more samples, any mutant pools may be used as an input in MSA, compared to the wild type without causative mutations and mutant phenotype. 
 
 The example output files are listed as followed:
+
 mu_wt.pos: all SNPs/indels produce by Varscan.
 mu_wt.posall: all postive SNPs/indels which are homozygous in the mutant pool and heterzygous in the wild type pool, in a window of 100kb.
 mu_wt.posall.ggbio.pdf: linkage peaks plotted by R. 
 
 Summary for all files in example folder:
 Fastq files: Wild type, wt_1.fastq and wt_2.fastq; Mutant type, mu_1.fastq and mu_2.fastq.
-Bam files: wild.PE0.sorted.bam and mutant.PE0.sorted.bam
-SNP file: mutant_wild.mileup.cns.fil
+Bam files: wild.PE0.sorted.bam and mutant.PE0.sorted.bam.
+SNP file: mutant_wild.mileup.cns.fil.
 Reference: reference.fa and bowtie2 index files: reference.bw2.*. 
 Result files: mu_wt.posall.ggbio.pdf (linkage peak plot), mu_wt.pos (postive SNPs/indels), mu_wt.posall (positve SNP number in a window of 100kb)
