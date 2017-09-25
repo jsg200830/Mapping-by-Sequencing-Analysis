@@ -43,7 +43,7 @@ mu_wt.posall: all postive SNPs/indels which are homozygous in the mutant pool an
 
 mu_wt.posall.ggbio.pdf: linkage peaks plotted by R. 
 
-Summary for all files in example folder:
+# Summary for all files in example folder
 Fastq files: Wild type, wt_1.fastq and wt_2.fastq; Mutant type, mu_1.fastq and mu_2.fastq.
 
 Bam files: wild.PE0.sorted.bam and mutant.PE0.sorted.bam.
