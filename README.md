@@ -28,8 +28,13 @@ Variant input file (time effective and only for linkage peak plotting, but need 
 mutant_wild.mileup.cns.fil: SNP/indel file with a format of chromosome#, position, reference nucleotide, alternative nucleotide, reference read number, alternative site' read number. It is retrieved from the SNP/indels file by Varscan, and the user can make it by themselves by using any available software. 
 
 # Running examples
+Start with paired fastq files (wild type VS mutant type)
 1.	“perl MSA_v0.pl --w_fqp=wt_1.fastq wt_2.fastq --m_fqp=mu_1.fastq mu_2.fastq --reference2=reference.bw2 --threads=20 --output=test”
+
+Start with alignemnt bam files which should be paired for wild type and mutant type.
 2.	“perl MSA_v0.pl --m_bam=mutant.PE0.sorted.bam --w_bam=wild.PE0.sorted.bam --reference2=reference.bw2 --threads=20 --output=test”
+
+Start with a SNP/indel file which should be organized in a format as followed: chromosome#, position, reference nucleotide, alternative nucleotide, reference read number, alternative site' read number (see example input file "mutant_wild.mileup.cns.fil").
 3.	“perl MSA_v0.pl --mw_cns=mutant_wild.mileup.cns.fil --threads=20 --output=test”
 
 # Output
