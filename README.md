@@ -37,9 +37,9 @@ MSA displays the linkage peaks, which indicate linkage disequilibrium and causat
 
 The example output files are listed as followed:
 
-mu_wt.pos: all SNPs/indels produce by Varscan.
+mu_wt.pos: all SNPs/indels produce by Varscan. Format: chromsome#, position, reference nucleotide, alternative nucleotide, reference read number for wild type, alternative site' read number for wild type, reference read number for mutant, alternative site' read number for mutant
 
-mu_wt.posall: all postive SNPs/indels which are homozygous in the mutant pool and heterzygous in the wild type pool, in a window of 100kb.
+mu_wt.posall: all postive SNPs/indels which are homozygous in the mutant pool and heterzygous in the wild type pool, in a window of 100kb. Format: chromsome#, position, positive SNPs/indels, all SNPs/indels, frequency of postive SNPs/indels. 
 
 mu_wt.posall.ggbio.pdf: linkage peaks plotted by R. 
 
