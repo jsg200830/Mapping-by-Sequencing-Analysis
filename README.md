@@ -66,3 +66,25 @@ SNP file: mutant_wild.mileup.cns.fil.
 Reference: reference.fa and bowtie2 index files: reference.bw2.*. 
 
 Result files: mu_wt.posall.ggbio.pdf (linkage peak plot), mu_wt.pos (postive SNPs/indels), mu_wt.posall (positve SNP number in a window of 100kb)
+
+# Deletion identification
+In addition, we provided two perl scripts for deleted exon identification: exome_depth_maize.pl and comparing_depth_maize.pl. They can work with bam files from wild type and mutant type samples, and produced a table to compare the abundance of exons based on the B73 assembly (for example v3.25, downloaded from ftp://ftp.ensemblgenomes.org/pub/plants/release-25/gtf/zea_mays/Zea_mays.AGPv3.25.gtf.gz).
+
+Runnig steps:
+1. Alignment files by bowtie2, similar to the above MSA. (wild.PE0.sorted.bam and mutant.PE0.sorted.bam)
+2. download maize gtf file, ftp://ftp.ensemblgenomes.org/pub/plants/release-25/gtf/zea_mays/Zea_mays.AGPv3.25.gtf.gz.
+3. gunzip Zea_mays.AGPv3.25.gtf.gz
+4. samtools depth wild.PE0.sorted.bam > wild.PE0.sorted.bam.depth
+5. samtools depth mutant.PE0.sorted.bam > mutant.PE0.sorted.bam.depth
+6. perl exome_depth_maize.pl wild.PE0.sorted.bam.depth
+7. perl exome_depth_maize.pl mutant.PE0.sorted.bam.depth
+8. perl comparing_depth_maize.pl wild.PE0.sorted.bam.depth mutant.PE0.sorted.bam.depth
+
+The output file, wild.PE0.sorted.bam.depth.exondepth_mutant.PE0.sorted.bam.depth.exondepth_exondepth.txt, is with read depth for each exon with wild type vs mutant type as followed.
+ExonID  Chromosome# Start End Length  Depth_wildtype  Normalizeddepth_wildtype  ExonID  Chromosome# Start End Length  Depth_mutanttype  Normalizeddepth_mutanttype  annotation
+
+The gene annotation is from the file "biomart_maize_genefeature.txt". 
+
+
+
+
